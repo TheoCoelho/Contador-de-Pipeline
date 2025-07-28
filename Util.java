@@ -14,15 +14,13 @@ public class Util {
         return instrucoes;
     }
 
- public static void salvarResultado(String caminho, int ciclos) throws IOException {
-    Path pastaResultados = Paths.get("RESULTADOS");
-
-
-    String nomeArquivo = Paths.get(caminho).getFileName().toString(); 
-    String nomeSaida = nomeArquivo.replace(".txt", "-RESULTADO.txt");
-
-    Path caminhoSaida = pastaResultados.resolve(nomeSaida);
-    Files.write(caminhoSaida, String.valueOf(ciclos).getBytes());
-}
+    // salva resultado dos ciclos
+    public static void salvarResultado(String caminho, int ciclos) throws IOException {
+        Path pastaResultados = Paths.get("RESULTADOS");
+        String nomeArquivo = Paths.get(caminho).getFileName().toString(); 
+        String nomeSaida = nomeArquivo.replace(".txt", "-RESULTADO.txt");
+        Path caminhoSaida = pastaResultados.resolve(nomeSaida);
+        Files.write(caminhoSaida, String.valueOf(ciclos).getBytes());
+    }
 
 }

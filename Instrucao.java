@@ -44,7 +44,6 @@ public class Instrucao {
                 rt = partes[1];
                 rs = partes[2];
                 break;
-
         }
     }
 }

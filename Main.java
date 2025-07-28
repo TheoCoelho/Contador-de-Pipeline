@@ -15,10 +15,11 @@ public class Main {
             String resultadoArquivo = Paths.get("RESULTADOS", String.format("TESTE-%02d.txt", i)).toString();
             try {
                 List<Instrucao> instrucoes = Util.lerInstrucoes(nomeArquivo);
-                int ciclos = PipelineSimulator.simular(instrucoes);
+                int ciclos = Contador.simular(instrucoes);
                 Util.salvarResultado(resultadoArquivo, ciclos);
             }
-
+            catch (Exception e) {
+            }
         }
     }
 }
