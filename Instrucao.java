@@ -1,4 +1,3 @@
-// Instrucao.java
 public class Instrucao {
     public String tipo;
     public String op;
@@ -45,8 +44,7 @@ public class Instrucao {
                 rt = partes[1];
                 rs = partes[2];
                 break;
-            default:
-                tipo = "OUTRO";
+
         }
     }
 }
